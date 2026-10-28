@@ -86,3 +86,29 @@ dialog{background:#080808;border-color:#3a3a3a}dialog::backdrop{background:#000b
 .partnership-footer{flex-wrap:wrap}.partnership-footer>span:first-child{color:#f05a60;font-weight:600}.partnership-footer>i{font-style:normal;color:#666}.partnership-footer>b{font-weight:600;letter-spacing:1px;color:#dce2eb}
 @media(max-width:1150px){.partnership-brand{padding-left:5px;gap:8px}.partnership-brand .thermo-wordmark{font-size:18px}.partnership-brand .iteria-wordmark{font-size:15px;letter-spacing:2.2px}}
 @media(max-width:680px){.partnership-brand{display:none}.topbar>.breadcrumb{display:none}.mobile-partnership{display:flex;align-items:center;gap:7px;white-space:nowrap;line-height:1}.mobile-partnership>span{font:750 12px/1 Arial,sans-serif;letter-spacing:-.4px;color:#ed1c24}.mobile-partnership>b{font:300 11px/1 Arial,sans-serif;color:#737373}.mobile-partnership>strong{font:600 10px/1 Arial,sans-serif;letter-spacing:1px;color:#eee}.partnership-footer{max-width:200px}.filterbar .filter-left{order:1;width:auto;border-top:0;padding-top:0}.filterbar .date-control{order:2}}
+
+/* Slightly clearer labels while preserving the compact chart layout. */
+.metric-label{font-size:9px;color:#b4bfce}
+.metric-note{font-size:8px;color:#939faf}
+.gauge-card .metric-note{font-size:7px;color:#939faf}
+.panel-heading p{font-size:8px;color:#9ba7b8}
+.legend,.series-toggle{font-size:8px;color:#aeb9ca}
+.mix-legend>div{font-size:8px;color:#abb7c8}
+.mix-legend b{font-size:8px;color:#cad5e4}
+.compact-legend>div,.compact-legend small{font-size:8px;color:#a8b3c4}
+.chart-bottom,.demo-chart-grid .chart-bottom{font-size:8px;color:#969faf}
+.chart-bottom b{color:#aeb8c9}
+.inline-key,.demo-chart-grid .inline-key{font-size:8px;color:#aab6c8;flex-wrap:wrap;row-gap:4px}
+.activity-bar>span{font-size:9px;color:#afbaca}
+.activity-bar>b{font-size:9px;color:#c1ccdc}
+.activity-bar b small{font-size:7px;color:#97a3b4}
+.section-heading>.scope-label{font-size:8px;color:#98a5b9}
+.panel-tag{font-size:7px;color:#a4afc0}
+.panel-footnote,.cycle-note{font-size:7.5px;color:#98a4b5}
+.chart-label{font-size:11px;fill:#a7b2c4}
+.donut-sub{font-size:9px;fill:#9daabd}
+svg text[fill="#777"],svg text[fill="#888"],svg text[fill="#8a8a8a"],svg text[fill="#686868"],svg text[fill="#666"]{fill:#9ca8ba}
+svg text[font-size="7"],svg text[font-size="8"],svg text[font-size="8.5"]{font-size:9px}
+@media(max-width:1150px){.mix-legend>div,.compact-legend>div,.compact-legend small{font-size:7.5px}.section-heading>.scope-label{font-size:7.5px}}
+@media(max-width:680px){.metric-label{font-size:9px}.panel-heading p{font-size:8px}.mix-legend>div,.compact-legend>div,.compact-legend small{font-size:8px}.section-heading>.scope-label{font-size:7px}.chart-bottom,.demo-chart-grid .chart-bottom{font-size:7.5px}.panel-footnote,.cycle-note{font-size:7px}}
+.compact-legend>div{grid-template-columns:5px minmax(0,1fr) 28px 34px;column-gap:4px}
