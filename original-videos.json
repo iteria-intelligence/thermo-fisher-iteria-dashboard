@@ -1,0 +1,44 @@
+[
+  {
+    "id": "M002",
+    "title": "Keyboard input",
+    "camera": "2",
+    "full": "assets/videos/recording-M002.mp4",
+    "excerpt": "assets/videos/accufill-keyboard.mp4",
+    "poster": "assets/videos/accufill-keyboard.jpg",
+    "duration_s": 300.0,
+    "excerpt_duration_s": 12.0,
+    "moment_s": 286.77,
+    "excerpt_start_s": 280.77,
+    "source": "AccuFill report / slide 1",
+    "delivery": "Full recording; web playback copy"
+  },
+  {
+    "id": "M069",
+    "title": "Paper information",
+    "camera": "2",
+    "full": "assets/videos/recording-M069.mp4",
+    "excerpt": "assets/videos/accufill-paper.mp4",
+    "poster": "assets/videos/accufill-paper.jpg",
+    "duration_s": 299.916667,
+    "excerpt_duration_s": 12.0,
+    "moment_s": 216.6,
+    "excerpt_start_s": 210.6,
+    "source": "AccuFill report / slide 1",
+    "delivery": "Full recording; web playback copy"
+  },
+  {
+    "id": "M001",
+    "title": "Handheld device",
+    "camera": "2",
+    "full": "assets/videos/recording-M001.mp4",
+    "excerpt": "assets/videos/accufill-handheld.mp4",
+    "poster": "assets/videos/accufill-handheld.jpg",
+    "duration_s": 300.0,
+    "excerpt_duration_s": 11.833333,
+    "moment_s": 221.39,
+    "excerpt_start_s": 215.39,
+    "source": "AccuFill report / slide 1",
+    "delivery": "Full recording; web playback copy"
+  }
+]

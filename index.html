@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Thermo Fisher × Iteria laboratory intelligence demo dashboard with activity charts and source videos.">
+<title>Thermo Fisher × Iteria · Lab intelligence</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<svg class="icon-library" aria-hidden="true"><defs>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 12h4l3-8 5 16 3-8h5"/></symbol>
+<symbol id="i-flow" viewBox="0 0 24 24"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="15" y="15" width="6" height="6" rx="1.5"/><path d="M6 9v9h9M9 6h9v9"/></symbol>
+<symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></symbol>
+<symbol id="i-note" viewBox="0 0 24 24"><path d="M14 3H5v18h14V8zM14 3v6h5M8 13h8M8 17h6"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m8 5 7 7-7 7"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></symbol>
+<symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v5M17 3v5M3 11h18"/></symbol>
+<symbol id="i-expand" viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5"/></symbol>
+</defs></svg>
+<aside class="sidebar">
+<a class="brand partnership-brand" href="#overview" aria-label="Thermo Fisher × Iteria home"><span class="thermo-wordmark">Thermo Fisher</span><span class="brand-bottom"><span class="brand-cross">×</span><span class="iteria-wordmark">ITERIA</span></span></a>
+<div class="workspace"><div class="workspace-avatar">T</div><div><b>TFS workspace</b><span>Video intelligence</span></div><span class="workspace-dot"></span></div>
+<p class="nav-label">WORKSPACE</p>
+<nav aria-label="Main navigation" class="main-view-nav">
+<button class="main-view-nav-button is-selected" aria-label="Analytics" data-main-view="analytics"><svg><use href="#i-grid"/></svg><span>Analytics</span></button>
+<button class="main-view-nav-button" aria-label="Original videos" data-main-view="videos"><svg><use href="#i-film"/></svg><span>Original videos</span></button>
+</nav>
+<div class="analytics-subnav"><p class="nav-label">ON THIS PAGE</p><nav aria-label="Analytics sections">
+<a class="nav-link active" href="#overview"><svg><use href="#i-grid"/></svg>Overview</a>
+<a class="nav-link" href="#activity"><svg><use href="#i-wave"/></svg>Activity analysis</a>
+<a class="nav-link" href="#workflows"><svg><use href="#i-flow"/></svg>Workflows</a>
+</nav></div>
+<div class="sidebar-section"><p class="nav-label">CONNECTED REPORTS</p><div class="source-item"><span class="status-dot mint"></span>AccuFill workstation</div><div class="source-item"><span class="status-dot blue"></span>Computer-use analysis</div></div>
+<div class="sidebar-bottom"><div class="collection-status"><span class="status-dot mint"></span>Collection in progress<div class="collection-track"><span></span></div><span>1,000 hours of raw footage</span></div><button class="notes-link" data-notes><svg><use href="#i-note"/></svg>Data & methods<svg class="external"><use href="#i-arrow"/></svg></button><div class="profile"><span>SL</span><div>Research workspace<small>Public dashboard</small></div><b>•••</b></div></div>
+</aside>
+<div class="app">
+<header class="topbar"><a class="mobile-partnership" href="#overview" aria-label="Thermo Fisher × Iteria home"><span>Thermo Fisher</span><b>×</b><strong>ITERIA</strong></a><div class="breadcrumb">Workspace<svg><use href="#i-chevron"/></svg><b>TFS</b><svg><use href="#i-chevron"/></svg><span>Analytics</span></div><div class="top-actions"><span class="concept-badge" id="data-provenance"><span></span>DEMO DATA · Illustrative</span><button class="icon-button" data-notes aria-label="About this dashboard"><svg><use href="#i-note"/></svg></button><span class="mini-avatar">SL</span></div></header>
+<main>
+<div class="main-view-tabs" role="tablist" aria-label="Dashboard views">
+<button id="analytics-tab" class="main-view-tab is-selected" role="tab" aria-controls="analytics-view" aria-selected="true" tabindex="0" data-main-view="analytics"><span aria-hidden="true">01</span>Analytics</button>
+<button id="videos-tab" class="main-view-tab" role="tab" aria-controls="videos-view" aria-selected="false" tabindex="-1" data-main-view="videos"><span aria-hidden="true">02</span>Original videos</button>
+</div>
+<div id="analytics-view" role="tabpanel" aria-labelledby="analytics-tab">
+<section id="overview" class="overview">
+<div class="page-heading"><div><h1>Laboratory intelligence<span class="heading-dot"></span></h1></div><button class="button secondary" id="export-button"><svg><use href="#i-note"/></svg>Export snapshot</button></div>
+<div class="filterbar"><div class="filter-left"><span class="filter-label">SOURCE</span><span class="source-chip" id="source-label"><span class="status-dot mint"></span>Illustrative scenario</span><span class="filter-divider"></span><span class="filter-label">VIEW</span><span class="filter-text">Operational signals</span></div><label class="date-control"><svg><use href="#i-calendar"/></svg><select id="date-select" aria-label="Observation date"><option value="all">All demo shifts</option></select><span>⌄</span></label></div>
+
+<div class="metric-grid" id="metric-grid" aria-live="polite"></div>
+</section>
+<section id="activity" class="dashboard-section">
+<div class="section-heading"><h2>Activity intelligence</h2><span class="scope-label" id="activity-scope">2 workstations · 6 activity classes · 24 demo shifts</span></div>
+<div class="dense-chart-grid">
+<article class="panel volume-panel"><div class="panel-heading"><div><h3>Observation volume</h3><p>Illustrative segments by workstation</p></div><div class="legend series-buttons"><button class="series-toggle active" data-series="AccuFill" aria-pressed="true"><i class="swatch blue"></i>AccuFill</button><button class="series-toggle active" data-series="ComputerUse" aria-pressed="true"><i class="swatch mint"></i>Computer use</button></div></div><div id="volume-chart" class="volume-chart"></div><div class="chart-bottom"><span id="volume-caption"><i class="tiny-square"></i>Illustrative shift sequence</span><b id="volume-total"></b></div></article>
+<article class="panel composition-panel"><div class="panel-heading"><div><h3>Activity composition</h3><p>AccuFill · sampled moments</p></div><button class="icon-button" id="mix-expand" aria-label="View activity mix details"><svg><use href="#i-expand"/></svg></button></div><div class="mix-content"><div id="mix-chart"></div><div id="mix-legend" class="mix-legend"></div></div></article>
+<article class="panel classification-panel"><div class="panel-heading"><div><h3>Clip classifications</h3><p>Illustrative coarse-label counts</p></div><span class="panel-tag">Indexed</span></div><div id="classification-chart" class="classification-chart"></div><div id="classification-legend" class="compact-legend"></div></article>
+<article class="panel breakdown-panel"><div class="panel-heading"><div><h3>Operation portions</h3><p>Within positive AccuFill clips</p></div><span class="panel-tag">Sample</span></div><div id="activity-bars" class="activity-bars"></div><div class="panel-footnote"><span class="status-dot gold"></span>Portions describe the sampled subset.</div></article>
+<article class="panel heatmap-panel"><div class="panel-heading"><div><h3>Activity × observation date</h3><p>Category shares · each date’s AccuFill sample</p></div><span class="color-scale"><i></i>Low → high</span></div><div id="activity-heatmap" class="activity-heatmap"></div></article>
+<article class="panel daily-signal-panel"><div class="panel-heading"><div><h3>Digital activity by date</h3><p>Share of sampled moments</p></div><div class="legend"><span><i class="swatch mint"></i>Input</span><span><i class="swatch gold"></i>Paper</span></div></div><div id="daily-signal-chart" class="daily-signal-chart"></div><div class="chart-bottom"><span>AccuFill sample</span><b>Input + information work</b></div></article>
+<article class="panel station-panel"><div class="panel-heading"><div><h3>Classification by workstation</h3><p>Positive / uncertain / other segments</p></div><span class="panel-tag">Reports</span></div><div id="station-chart" class="station-chart"></div><div class="inline-key"><span><i style="background:#74cfb8"></i>Positive</span><span><i style="background:#e3bc68"></i>Uncertain</span><span><i style="background:#8299b1"></i>Other</span></div></article>
+<article class="panel sampling-panel"><div class="panel-heading"><div><h3>Sampling & review</h3><p>Unresolved activity classifications</p></div><span class="panel-tag orange-text">Review</span></div><div id="review-chart" class="review-chart"></div><div id="review-totals" class="review-totals"></div></article>
+<article class="panel opportunity-panel"><div class="panel-heading"><div><h3>Digital work signals</h3><p>Computer-use candidate tasks</p></div><span class="signal-icon"><svg><use href="#i-wave"/></svg></span></div><div class="opportunity-hero"><div><span class="opportunity-number" id="signal-share">7.2<span>%</span></span><p>clear input + information work</p></div><div id="signal-chart"></div></div><div class="signal-row"><span><i class="swatch mint"></i>Routine field entry</span><b>Candidate</b></div><div class="signal-row"><span><i class="swatch blue"></i>Document lookup</span><b>Candidate</b></div><div class="signal-row"><span><i class="swatch violet"></i>Record preparation</span><b class="muted">Proposed</b></div><button class="text-button" id="review-opportunities">Workflow scenario <svg><use href="#i-arrow"/></svg></button></article>
+</div>
+</section>
+<section id="demo-telemetry" class="dashboard-section demo-only">
+<div class="section-heading"><h2>Operational telemetry <span class="demo-label">DEMO</span></h2><span class="scope-label">Illustrative activity signals · synthetic data</span></div>
+<div class="demo-chart-grid">
+<article class="panel telemetry-panel"><div class="panel-heading"><div><h3>Activity pulse</h3><p>96 illustrative intervals · relative activity index</p></div><span class="panel-tag demo-tag">Demo</span></div><div id="telemetry-chart" class="telemetry-chart"></div><div class="inline-key"><span><i style="background:#568ff0"></i>Station activity</span><span><i style="background:#78d8b7"></i>Computer input</span><span><i style="background:#e3bc68"></i>Information work</span></div></article>
+<article class="panel event-map-panel"><div class="panel-heading"><div><h3>Workflow event map</h3><p>Illustrative action sequence · 6 activity lanes</p></div><span class="panel-tag demo-tag">Demo</span></div><div id="event-map-chart" class="event-map-chart"></div><div class="chart-bottom"><span>Color encodes illustrative action intensity</span><b>48 intervals</b></div></article>
+<article class="panel cycle-distribution-panel"><div class="panel-heading"><div><h3>Cycle-time distribution</h3><p>120 synthetic runs · elapsed instrument hours</p></div><span class="panel-tag demo-tag">Demo</span></div><div id="cycle-distribution-chart" class="cycle-distribution-chart"></div><div class="chart-bottom"><span>Synthetic run duration</span><b id="cycle-demo-median"></b></div></article>
+</div></section>
+<section id="workflows" class="dashboard-section">
+<div class="section-heading"><h2>Workflow opportunity</h2><span class="scope-label">Thermal-cycler · four-array setup</span></div>
+<div class="workflow-grid">
+<article class="panel task-panel"><div class="panel-heading"><div><h3>Setup task breakdown</h3><p>Four arrays · assumed seconds of operator work</p></div><span class="panel-tag gold-text">Planning</span></div><div id="setup-task-chart" class="setup-task-chart"></div><div class="inline-key"><span><i style="background:#526d9f"></i>Manual</span><span><i style="background:#78d8b7"></i>Agent assisted</span></div></article>
+<article class="panel cycle-panel"><div class="panel-heading"><div><h3>Elapsed time vs. operator work</h3><p>Two different clocks in the same workflow</p></div><span class="panel-tag">Reference</span></div><div class="cycle-comparison"><div><span>~4<span>h</span></span><b>Genotyping instrument run</b><small>Manufacturer benchmark</small></div><div><span>~5<span>h</span></span><b>Purified DNA → genotyping data</b><small>Broader workflow benchmark</small></div></div><div class="elapsed-reference-label">Manufacturer references · separate scopes</div><div class="cycle-note">Different scopes; not additive. Actual TFS run duration varies by method.</div></article>
+<article class="panel automation-panel"><div class="panel-heading"><div><h3>Setup automation scenario</h3><p>Operator touch time, per run</p></div><span class="panel-tag gold-text">Planning only</span></div><div class="savings-summary"><div><b>1.7–3.3 <span>min</span></b><p>assumed operator time saved</p></div><div class="saving-chip">Setup only</div></div><div class="scenario-row"><span>Manual</span><div><i style="width:90%;background:var(--slate)"></i></div><b>3.4–6.8 min</b></div><div class="scenario-row"><span>With agent</span><div><i style="width:46%;background:var(--mint)"></i></div><b>1.7–3.5 min</b></div><div class="cycle-note">Illustrative assumptions. Thermal program unchanged; savings unmeasured.</div></article>
+</div>
+</section>
+
+</div>
+<div id="videos-view" role="tabpanel" aria-labelledby="videos-tab" hidden>
+<section id="videos" class="original-video-section">
+<div class="video-page-heading"><div><p class="media-eyebrow">COLLECTION / ACCUFILL</p><h1>Original videos</h1><p>Source recordings and sampled moments from the slide deck.</p></div><div class="collection-reading"><strong>1,000 <span>hrs</span></strong><span>Raw footage collection in progress</span></div></div>
+<div class="section-heading recording-section-heading"><h2>Featured recordings</h2><span class="scope-label" id="recordings-summary">3 source recordings · full-length playback</span></div>
+<div id="recordings-grid" class="recordings-grid" aria-label="Source video recordings"></div>
+</section>
+<section id="evidence" class="dashboard-section source-mosaic-section">
+<div class="section-heading"><h2>Source mosaic</h2><span class="scope-label"><span id="source-frame-count">48</span> sampled frames · from slide 1</span></div>
+<div class="panel evidence-panel"><div class="panel-heading"><div class="evidence-tabs" role="group" aria-label="Evidence category"><button class="evidence-tab active" data-category="all">All moments</button><button class="evidence-tab" data-category="active_input">Computer input</button><button class="evidence-tab" data-category="paper_information">Information work</button><button class="evidence-tab" data-category="otherheld_device">Handheld</button></div><label class="evidence-search"><svg><use href="#i-search"/></svg><input id="evidence-search" type="search" placeholder="Find a moment" aria-label="Search evidence examples"></label></div><div id="evidence-grid" class="evidence-grid"></div></div>
+</section>
+</div>
+<footer class="page-footer"><span class="partnership-footer"><span>Thermo Fisher</span><i>×</i><b>ITERIA</b><span class="footer-dot">/</span>Laboratory intelligence</span><button data-notes>Data provenance & assumptions <span>↗</span></button></footer>
+</main>
+</div>
+<dialog id="notes-dialog"><div class="dialog-header"><div><span class="eyebrow">DATA CONTEXT</span><h2>About this view</h2></div><button class="icon-button close-dialog" aria-label="Close data notes">×</button></div><div class="dialog-body"><p>This dashboard uses <b>synthetic demo data</b>: 24 illustrative shifts, 96 activity intervals, an event map and 120 simulated cycle durations. These are not measured TFS results. Original videos and evidence images are real source material; the workflow planning assumptions are estimates.</p><div class="note-block"><h3>Collection & analysis</h3><p><b>1,000 hours</b> is the collection program stated by the team. The chart counts and activity patterns are illustrative values for this demonstration. Coarse clip labels do not imply continuous computer input.</p></div><div class="note-block"><h3>Activity portions</h3><p>Activity portions describe the synthetic demo sample. They do not estimate activity across all 1,000 hours of raw footage.</p></div><div class="note-block"><h3>Automation scenario</h3><p>Manual setup of 3.4–6.8 minutes and assisted setup of 1.7–3.5 minutes are planning assumptions for four arrays, with paired savings of 1.7–3.3 minutes. They exclude instrument waits and thermal cycling. Savings have not been measured.</p></div><div class="note-block"><h3>Elapsed-time references</h3><p>Thermo Fisher lists <a href="https://documents.thermofisher.com/TFS-Assets/GSD/brochures/infectious-disease-brochure-taqpath-menu-gp.pdf" target="_blank" rel="noopener">about four hours for genotyping instrument runs</a>, and <a href="https://documents.thermofisher.com/TFS-Assets/LSG/brochures/cms_081550.pdf" target="_blank" rel="noopener">about five hours from purified DNA to genotyping data</a>. Different scopes; not additive. These do not establish the actual TFS run duration.</p></div></div></dialog>
+<dialog id="evidence-dialog"><div class="dialog-header"><div><span class="eyebrow">EVIDENCE MOMENT</span><h2 id="evidence-title"></h2></div><button class="icon-button close-dialog" aria-label="Close evidence">×</button></div><div class="dialog-body"><div class="evidence-detail-frame"><img id="evidence-detail-image" alt="Selected AccuFill evidence frame"></div><p class="evidence-description">Representative frame from the supplied AccuFill activity report. Classification describes this selected moment, not the entire recording.</p></div></dialog>
+<dialog id="recording-dialog" class="recording-dialog"><div class="dialog-header"><div><span class="eyebrow">ORIGINAL RECORDING</span><h2 id="recording-title">Source recording</h2></div><button class="icon-button close-dialog" aria-label="Close video">×</button></div><div class="recording-dialog-content"><div class="player-switch" role="group" aria-label="Playback source"><button id="play-full-recording" class="is-selected" aria-pressed="true">Full recording</button><button id="play-slide-excerpt" aria-pressed="false">Slide excerpt</button></div><video id="recording-player" controls playsinline preload="metadata" aria-label="Original source video"></video><p id="video-loading" class="video-loading" role="status" hidden></p><div class="player-bottom"><div><b id="recording-meta"></b><p id="recording-source-note">Full recording · web playback copy</p></div><button class="button" id="jump-to-slide-moment">Jump to slide moment</button></div></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
