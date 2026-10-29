@@ -76,16 +76,24 @@ html,body,.app{background:#000}
 .player-switch{background:#0c0c0c;border-color:#333}.player-switch>button.is-selected{background:#252525;box-shadow:inset 0 0 0 1px #505050}
 dialog{background:#080808;border-color:#3a3a3a}dialog::backdrop{background:#000b}
 
-/* Thermo Fisher × Iteria partnership wordmark. */
-.partnership-brand{display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding-left:8px;letter-spacing:0;line-height:1;text-decoration:none}
-.partnership-brand .thermo-wordmark{font:750 20px/.95 Arial,sans-serif;letter-spacing:-.9px;color:#ed1c24;white-space:nowrap}
-.partnership-brand .brand-bottom{display:flex;align-items:center;gap:10px}
-.partnership-brand .brand-cross{font:300 17px/1 Arial,sans-serif;color:#747474}
-.partnership-brand .iteria-wordmark{font:600 17px/1 Arial,sans-serif;letter-spacing:2.7px;color:#f2f2f2}
+/* Supplied partner logo images; CSS trims only the surrounding padding. */
+.partner-logo{position:relative;display:block;flex:none;overflow:hidden;line-height:0}
+.partner-logo img{position:absolute;display:block;max-width:none;height:auto;top:50%;transform:translateY(-50%)}
+.logo-thermo{width:134px;height:38px;background:#ed0d0d}
+.logo-thermo img{width:138%;left:-19%}
+.logo-iteria{width:116px;height:24px}
+.logo-iteria img{width:147%;left:-23.5%}
+.logo-cross{color:#82858b;font:300 16px/1 Arial,sans-serif;letter-spacing:0;flex:none}
+.partnership-brand{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding-left:5px;letter-spacing:0;line-height:1;text-decoration:none}
+.partnership-brand .brand-bottom{display:flex;align-items:center;gap:9px}
 .mobile-partnership{display:none}
-.partnership-footer{flex-wrap:wrap}.partnership-footer>span:first-child{color:#f05a60;font-weight:600}.partnership-footer>i{font-style:normal;color:#666}.partnership-footer>b{font-weight:600;letter-spacing:1px;color:#dce2eb}
-@media(max-width:1150px){.partnership-brand{padding-left:5px;gap:8px}.partnership-brand .thermo-wordmark{font-size:18px}.partnership-brand .iteria-wordmark{font-size:15px;letter-spacing:2.2px}}
-@media(max-width:680px){.partnership-brand{display:none}.topbar>.breadcrumb{display:none}.mobile-partnership{display:flex;align-items:center;gap:7px;white-space:nowrap;line-height:1}.mobile-partnership>span{font:750 12px/1 Arial,sans-serif;letter-spacing:-.4px;color:#ed1c24}.mobile-partnership>b{font:300 11px/1 Arial,sans-serif;color:#737373}.mobile-partnership>strong{font:600 10px/1 Arial,sans-serif;letter-spacing:1px;color:#eee}.partnership-footer{max-width:200px}.filterbar .filter-left{order:1;width:auto;border-top:0;padding-top:0}.filterbar .date-control{order:2}}
+.partnership-footer{display:flex;align-items:center;gap:7px;flex:none}
+.partnership-footer .logo-thermo{width:88px;height:25px}
+.partnership-footer .logo-iteria{width:78px;height:18px}
+.partnership-footer .logo-cross{font-size:12px}
+@media(max-width:1150px){.partnership-brand{padding-left:3px}.partnership-brand .logo-thermo{width:118px;height:34px}.partnership-brand .logo-iteria{width:100px;height:21px}.partnership-brand .brand-bottom{gap:7px}}
+@media(max-width:680px){.partnership-brand{display:none}.topbar>.breadcrumb{display:none}.mobile-partnership{display:flex;align-items:center;gap:6px;line-height:1}.mobile-partnership .logo-thermo{width:78px;height:25px}.mobile-partnership .logo-iteria{width:72px;height:18px}.mobile-partnership .logo-cross{font-size:12px}.partnership-footer{gap:5px}.partnership-footer .logo-thermo{width:74px;height:22px}.partnership-footer .logo-iteria{width:64px;height:17px}.filterbar .filter-left{order:1;width:auto;border-top:0;padding-top:0}.filterbar .date-control{order:2}}
+@media(max-width:375px){.mobile-partnership{gap:5px}.mobile-partnership .logo-thermo{width:64px;height:22px}.mobile-partnership .logo-iteria{width:60px;height:17px}.mobile-partnership .logo-cross{font-size:10px}}
 
 /* Slightly clearer labels while preserving the compact chart layout. */
 .metric-label{font-size:9px;color:#b4bfce}
